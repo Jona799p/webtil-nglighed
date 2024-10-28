@@ -4,53 +4,98 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+}
 
+main {
+    width: 100vw;
+}
+
+#img {
+    display: none;
+    height: 8vh;
+}
+
+#cross {
+    display: none;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    right: 0;
+
+    width: 100px;
+    z-index: 1;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    height: 10vh;
+
+
+    font-size: 3rem;
+    color: white;
+}
+
+nav, nav ul {
+    overflow: hidden;
+    flex-direction: column;
+}
+
+nav, nav ul, nav li, nav li a {
+    display: flex;
+}
+
+nav, nav li, nav li a {
+    justify-content: center;
+    align-items: center;
+    
+}
 
 .logo img {
-    position: absolute;
     width: 5vw;
-    top: 0;
-    left: 0;
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
+    height: 100svh;
+    width: 100%;
 
-    justify-content: center;
-    align-items: center;
-
-    height: 100vh;
     background-color: #002432;
-    width: 5vw;
 }
 
 nav ul {
-    display: flex;
-    flex-direction: column;
-
     justify-content: space-evenly;
     align-items: center;
 
-    height: 80vh;
+    height: 85vh;
     width: 100%;
 }
 
 nav li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 150px;
+    height: 70px;
+    width: 175px;
     list-style-type: none;
 }
 
+.navp {
+    display: none;
+}
+
 nav li a {
-    display: flex;
     gap: 10px;
+
     font-size: 1.5rem;
+
     color: white;
+
     text-decoration: none;
+
     transition: 0.1s;
 }
 
@@ -58,17 +103,61 @@ nav li a:hover {
     color: rgb(182, 182, 182);
 }
 
-.navp {
-    display: none;
-}
+#phone-header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    
+    justify-content: space-between;
+    align-items: center;
 
+    padding: 0 5%;
+
+    font-size: 2.5rem;
+    color: white;
+}
 
 @keyframes open {
-    0% {width: 5vw;}
-    100% {width: 12vw;}
+    0% {width: 100px;}
+    100% {width: 250px;}
+}
+ 
+@keyframes close {
+    0% {width: 250px;}
+    100% {width: 100px;}
 }
 
-@keyframes close {
-    0% {width: 12vw;}
-    100% {width: 5vw;}
+
+
+@media screen and (max-width: 700px) {
+
+    .logo img  {
+        width: 25vw;
+    }
+
+    #cross {
+        display: block;
+    }
+
+    #header {
+        width: 0;
+    }
+    
+    @keyframes open {
+        0% {width: 0;}
+        100% {width: 100vw;}
+    }
+
+    @keyframes close {
+        0% {width: 100vw;}
+        100% {width: 0vw;}
+    }
+
+    #phone-header {
+        height: 8vh;
+        width: 100vw;
+        background-color: #002432;
+    }
+
+
 }
