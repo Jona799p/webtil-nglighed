@@ -1,42 +1,17 @@
-var x = document.getElementById("navigation");
-var y = document.getElementsByClassName("navli");
-var l = document.getElementById("img")
-var elements = document.getElementsByClassName("navp");
-var q = document.getElementById("Hamburger");
-var k = document.getElementById("cross")
-
-x.addEventListener("mouseover", open);
-x.addEventListener("mouseout", close);
-q.addEventListener("click", open)
-k.addEventListener("click", close)
+const nav = document.querySelector("nav");
+const menu = document.getElementById("menu")
+const cross = document.getElementById("cross");
 
 
-function open() {
-    
-    l.style.display = "block";
-    x.style.animation = "open 0.1s linear forwards";
-
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].style.display = "block"
-    }
-
-    for (var n = 0; n < y.length; n++) {
-        y[n].style.justifyContent = "space-between"
-    }
-
+const open = () => {
+    nav.style.animation = "open 0.1s linear forwards"
 }
 
-function close() {
-
-    l.style.display = "none"
-    x.style.animation="close 0.1s linear forwards";
-
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].style.display = "none"  
-    }
-
-    for (var n = 0; n < y.length; n++) {
-        y[n].style.justifyContent = "center"
-    }
-
+const close = () => {
+    nav.style.animation = "close 0.1s linear forwards"
 }
+
+nav.addEventListener("mouseover", open);
+nav.addEventListener("mouseout", close);
+menu.addEventListener("click", open);
+cross.addEventListener("click", close);
