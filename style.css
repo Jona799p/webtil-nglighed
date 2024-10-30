@@ -43,6 +43,11 @@ nav ul {
     width: 100%;
 }
 
+nav ul li img {
+    width: 100px;
+    position: absolute;
+    top: 0;
+}
 
 nav ul li {
     width: 100%;
@@ -121,7 +126,7 @@ nav ul li a:hover {
 
         background-color: #002432;
 
-        padding: 0 8vw;
+        padding: 0 5vw;
 
         color: white;
         font-size: 2.5rem;
@@ -140,6 +145,10 @@ nav ul li a:hover {
         position: absolute;
         top: 25px;
         right: 25px;
+    }
+
+    nav ul li:first-of-type {
+        display: none;
     }
 
     @keyframes open {
