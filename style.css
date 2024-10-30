@@ -16,13 +16,22 @@ main {
     padding-left: 100px;
 }
 
+nav, nav ul, nav ul li a, .phone-header {
+    display: flex;
+}
+
+.cross, .phone-header, nav div{
+    display: none;
+}
+
+nav, nav ul, nav ul li a, .phone-header {
+    align-items: center;
+}
+
 nav {
     height: 100vh;
-    width: 100vw;
+    width: 100px;
     background-color: #002432;
-
-    display: flex;
-    align-items: center;
 
     overflow: hidden;
 }
@@ -30,23 +39,23 @@ nav {
 nav ul {
     list-style-type: none;
 
-    display: flex;
-
-    position: relative;
-
     flex-direction: column;
 
-    align-items: center;
     justify-content: center;
 
     height: 100vh;
     width: 100%;
+
+    overflow: hidden;
+    
 }
 
-nav ul li img {
+nav ul img {
     width: 100px;
+    height: 12vh;
     position: absolute;
     top: 0;
+    left: 0;
 }
 
 nav ul li {
@@ -54,9 +63,7 @@ nav ul li {
 }
 
 nav ul li a {
-    display: flex;
-    align-items: center;
-    height: 100px;
+    height: 12vh;
     width: 100%;
     text-decoration: none;
     color: white;
@@ -77,14 +84,6 @@ nav ul li a:hover {
     color: black;
 }
 
-.phone-header {
-    display: none;
-}
-
-.cross {
-    display: none;
-}
-
 @keyframes open {
     0% {width: 100px;}
     100% {width: 275px;}
@@ -98,17 +97,13 @@ nav ul li a:hover {
 
 @media screen and (max-width: 800px) {
 
-    
-
     nav {
-        display: flex;
-
         flex-direction: column;
 
         justify-content: center;
-        align-items: center;
 
         width: 0;
+
     }
 
     main {
@@ -119,7 +114,6 @@ nav ul li a:hover {
         display: flex;
         
         justify-content: flex-end;
-        align-items: center;
 
         width: 100vw;
         height: 75px;
@@ -132,23 +126,27 @@ nav ul li a:hover {
         font-size: 2.5rem;
     }
 
-    .cross {
-        display: block;
-    
-        width: 100%;
-        padding: 0 10vw;
+    nav ul img {
+        height: 75px;
+        width: 85px;
+    }
+
+    nav div {
+        display: flex;
+        position: relative;
+
+        justify-content: flex-end;
+        padding: 20px;
+        width: 100vw;
+
+    }
+
+    nav #cross {
         color: white;
-        font-size: 2.5rem;
-    }
-
-    .cross i {
+        font-size: 3rem;
         position: absolute;
-        top: 25px;
-        right: 25px;
-    }
-
-    nav ul li:first-of-type {
-        display: none;
+        right: 20px;
+        top: 10px;
     }
 
     @keyframes open {
