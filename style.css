@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow: hidden;
+}
+
+
 header {
     position: fixed;
     top: 0;
@@ -12,11 +17,14 @@ header {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
     padding-left: 100px;
 }
 
-nav, nav ul, nav ul li a, .phone-header {
+nav, nav ul, nav ul li a, .phone-header, .Welcome-text {
     display: flex;
 }
 
@@ -34,6 +42,8 @@ nav {
     background-color: #002432;
 
     overflow: hidden;
+
+    box-shadow: 0 0 6px black;
 }
 
 nav ul {
@@ -93,6 +103,101 @@ nav ul li a:hover {
     0% {width: 275px;}
     100% {width: 100px;}
 } 
+
+main .Welcome-text {
+    align-items: center;
+
+    padding: 0 10vw;
+
+    width: 100vw;
+    height: 100px;
+}
+
+.Welcome-text p {
+    font-size: 2rem;
+}
+
+.Vejledninger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 85vw;
+    height: 60vh;
+    border-radius: 5px;
+    border: 1px solid gray;
+
+    box-shadow: 0 2px 6px gray;
+}
+
+.Vejledninger .cards {
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    width: 95%;
+    height: 60vh;
+}
+
+.Vejledninger .cards a:hover {
+    box-shadow: 0 2px 16px gray;
+}
+
+.Vejledninger .cards a {
+    text-decoration: none;
+    color: black;
+
+    width: 250px;
+    height: 40vh;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px gray;
+}
+
+.Vejledninger .cards a .img {
+    display: flex;
+
+    justify-content: center;
+    align-content: center;
+
+    width: 100%;
+    height: 60%;
+
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid gray;
+}
+
+.Vejledninger .cards a div img {
+    display: flex;
+    width: 100%;
+    height: 60%;
+
+    object-fit: contain;
+
+}
+
+.Vejledninger .cards a div {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+
+    gap: 3px;
+}
+
+.Vejledninger .cards a div p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.Vejledninger .cards a div p:nth-child(2) {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
 
 
 @media screen and (max-width: 800px) {
@@ -158,6 +263,20 @@ nav ul li a:hover {
         0% {width: 100vw;}
         100% {width: 0; }
     } 
+
+    main .Welcome-text {
+        align-items: center;
+    
+        padding: 0 5vw;
+    
+        width: 100vw;
+        height: 125px;
+    }
+    
+    Main .Welcome-text p {
+        font-size: 1.5rem;
+    }
+    
     
 
 
