@@ -120,110 +120,49 @@ main .Welcome-text {
     font-size: 2rem;
 }
 
-.Vejledninger {
-    display: flex;
-
-    align-items: center;
-
-    width: 1600px;
-    height: 640px;
+.vejledninger {
+    width: 60vw;
+    height: 45vh;
 
     border: 1px solid gray;
     border-radius: 5px;
-
 }
 
-.Vejledninger ul {
-    display: grid;
-
-    width: 100%;
-    height: 500px;
-
-    gap: 25px;
-
-    justify-content: space-evenly;
-
-    grid-template-columns: repeat(4, 350px);
-    grid-template-rows: 500px;
-
-    list-style-type: none;
-}
-
-.Vejledninger ul li {
-    border: 1px solid gray;
-    width: 100%;
-
-    overflow: hidden;
-}
-
-.Vejledninger ul li:hover {
-    border: 1px solid rgb(195, 195, 195);
-
-    box-shadow: 0 0 6px gray;
-}
-
-.Vejledninger ul li img {
-    width: 100%;
-    height: 100%;
-    
-    object-fit: cover;
-    object-position: center;
-}
-
-.Vejledninger ul li div {
-    position: relative;
-
-    color: white;
-
-    bottom: 40%;
-
-    height: 40%;
-}
-
-.Vejledninger ul li div div {
-    height: 65%;
-    width: 70%;
-    background-color: #272727;
-
-}
-
-.Vejledninger ul li div div h2, .Vejledninger ul li div div p, .Vejledninger ul li span {
-    position: absolute;
-}
-
-.Vejledninger ul li div div h2 {
-    left: 2%;
-    bottom: 40%;
-
-    font-size: 1.7rem;
-
-}
-
-.Vejledninger ul li div div p {
-    left: 2%;
-    bottom: 28%;
-
-    font-size: 1rem;
-}
-
-.Vejledninger ul li span {
+.vejledninger ul {
     display: flex;
-
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
-    font-weight: bold;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    gap: 20px;
+
+    width: 60vw;
+    height: 45vh;
+
+    list-style-type: none;
+
+    overflow-x: hidden;
     
-    bottom: 10%;
+    
+    padding: 0px 20px;
 
-    left: 50%;
-    transform: translate(-50%);
 
-    width: 50%;
-    height: 45px;
 
-    background-color: #272727;
 }
+
+.vejledninger li {
+    width: 20%;
+    height: 40vh;
+    background-color: red;
+    border: 1px solid black;
+
+    flex: 0 0 auto;
+
+}
+
+
 
 @media screen and (max-width: 1000px) {
 
@@ -302,21 +241,22 @@ main .Welcome-text {
         font-size: 1.5rem;
     }
 
-    .Vejledninger {
+    .vejledninger {
         width: 100vw;
-        overflow-x: scroll;
+        height: 60vh;
         border: none;
     }
 
-    .Vejledninger ul {
-        display: grid;
-    
-        grid-template-columns: repeat(4, 80vw);
-        grid-template-rows: 500px;
+    .vejledninger ul {
+        height: 60vh;
+        width: 100%;
 
+        overflow-x: scroll;
+    }
 
-        padding-left: 25px;
-
+    .vejledninger ul li {
+        width: 90%;
+        height: 60vh;
     }
 
 }
