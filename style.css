@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
     overflow: hidden;
@@ -119,88 +122,110 @@ main .Welcome-text {
 
 .Vejledninger {
     display: flex;
-    justify-content: center;
+
     align-items: center;
 
-    width: 85vw;
-    height: 60vh;
-    border-radius: 5px;
-    border: 1px solid gray;
+    width: 1600px;
+    height: 640px;
 
-    box-shadow: 0 2px 6px gray;
+    border: 1px solid gray;
+    border-radius: 5px;
+
 }
 
-.Vejledninger .cards {
-    display: flex;
+.Vejledninger ul {
+    display: grid;
+
+    width: 100%;
+    height: 500px;
+
+    gap: 25px;
 
     justify-content: space-evenly;
-    align-items: center;
 
+    grid-template-columns: repeat(4, 350px);
+    grid-template-rows: 500px;
 
-    width: 95%;
-    height: 60vh;
+    list-style-type: none;
 }
 
-.Vejledninger .cards a:hover {
-    box-shadow: 0 2px 16px gray;
-}
-
-.Vejledninger .cards a {
-    text-decoration: none;
-    color: black;
-
-    width: 250px;
-    height: 40vh;
-
+.Vejledninger ul li {
     border: 1px solid gray;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px gray;
+    width: 100%;
+
+    overflow: hidden;
 }
 
-.Vejledninger .cards a .img {
+.Vejledninger ul li:hover {
+    border: 1px solid rgb(195, 195, 195);
+
+    box-shadow: 0 0 6px gray;
+}
+
+.Vejledninger ul li img {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    object-position: center;
+}
+
+.Vejledninger ul li div {
+    position: relative;
+
+    color: white;
+
+    bottom: 40%;
+
+    height: 40%;
+}
+
+.Vejledninger ul li div div {
+    height: 65%;
+    width: 70%;
+    background-color: #272727;
+
+}
+
+.Vejledninger ul li div div h2, .Vejledninger ul li div div p, .Vejledninger ul li span {
+    position: absolute;
+}
+
+.Vejledninger ul li div div h2 {
+    left: 2%;
+    bottom: 40%;
+
+    font-size: 1.7rem;
+
+}
+
+.Vejledninger ul li div div p {
+    left: 2%;
+    bottom: 28%;
+
+    font-size: 1rem;
+}
+
+.Vejledninger ul li span {
     display: flex;
 
     justify-content: center;
-    align-content: center;
+    align-items: center;
 
-    width: 100%;
-    height: 60%;
+    font-weight: bold;
+    
+    bottom: 10%;
 
-    border-radius: 5px 5px 0 0;
-    border-bottom: 1px solid gray;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 50%;
+    height: 45px;
+
+    background-color: #272727;
 }
 
-.Vejledninger .cards a div img {
-    display: flex;
-    width: 100%;
-    height: 60%;
-
-    object-fit: contain;
-
-}
-
-.Vejledninger .cards a div {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-
-
-    gap: 3px;
-}
-
-.Vejledninger .cards a div p {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.Vejledninger .cards a div p:nth-child(2) {
-    font-size: 1rem;
-    opacity: 0.8;
-    font-weight: 400;
-}
-
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 
     nav {
         flex-direction: column;
@@ -255,13 +280,13 @@ main .Welcome-text {
     }
 
     @keyframes open {
-        0% {width: 0;}
-        100% {width: 100vw;} 
+        0% {width: 0}
+        100% {width: 100vw} 
     } 
     
     @keyframes close {
-        0% {width: 100vw;}
-        100% {width: 0; }
+        0% {width: 100vw}
+        100% {width: 0}
     } 
 
     main .Welcome-text {
@@ -276,8 +301,22 @@ main .Welcome-text {
     Main .Welcome-text p {
         font-size: 1.5rem;
     }
-    
-    
 
+    .Vejledninger {
+        width: 100vw;
+        overflow-x: scroll;
+        border: none;
+    }
+
+    .Vejledninger ul {
+        display: grid;
+    
+        grid-template-columns: repeat(4, 80vw);
+        grid-template-rows: 500px;
+
+
+        padding-left: 25px;
+
+    }
 
 }
