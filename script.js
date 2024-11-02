@@ -11,6 +11,7 @@ const close = () => {
     nav.style.animation = "close 0.1s linear forwards"
 }
 
+
 nav.addEventListener("mouseover", open);
 nav.addEventListener("mouseout", close);
 menu.addEventListener("click", open);

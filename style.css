@@ -17,17 +17,11 @@ header {
     top: 0;
     left: 0;
     width: 100px;
+
+    z-index: 1000;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    padding-left: 100px;
-}
-
-nav, nav ul, nav ul li a, .phone-header, .Welcome-text {
+nav, nav ul, nav ul li a, .phone-header, .Welcome-text, main, .card-container article div {
     display: flex;
 }
 
@@ -37,6 +31,25 @@ nav, nav ul, nav ul li a, .phone-header, .Welcome-text {
 
 nav, nav ul, nav ul li a, .phone-header {
     align-items: center;
+}
+
+.card-container, .card-container article {
+    display: flex;
+    align-items: center;
+}
+
+nav ul, .card-container article, .card-container article div {
+    justify-content: center;
+}
+
+main, nav ul, .card-container article div {
+    flex-direction: column;
+}
+
+main {
+    align-items: center;
+    width: 100vw;
+    padding-left: 100px;
 }
 
 nav {
@@ -51,10 +64,6 @@ nav {
 
 nav ul {
     list-style-type: none;
-
-    flex-direction: column;
-
-    justify-content: center;
 
     height: 100vh;
     width: 100%;
@@ -97,16 +106,6 @@ nav ul li a:hover {
     color: black;
 }
 
-@keyframes open {
-    0% {width: 100px;}
-    100% {width: 275px;}
-} 
-
-@keyframes close {
-    0% {width: 275px;}
-    100% {width: 100px;}
-} 
-
 main .Welcome-text {
     align-items: center;
 
@@ -120,51 +119,87 @@ main .Welcome-text {
     font-size: 2rem;
 }
 
-.vejledninger {
-    width: 60vw;
-    height: 45vh;
+.card-container {
+    justify-content: space-evenly;
+    
+    width: 1600px;
+    height: 600px;
 
-    border: 1px solid gray;
+    box-shadow: 0 0 4px rgb(0,0,0,0.2);
     border-radius: 5px;
 }
 
-.vejledninger ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    flex-grow: 0;
-    flex-shrink: 0;
-
-    gap: 20px;
-
-    width: 60vw;
-    height: 45vh;
-
-    list-style-type: none;
-
-    overflow-x: hidden;
-    
-    
-    padding: 0px 20px;
-
-
-
-}
-
-.vejledninger li {
-    width: 20%;
-    height: 40vh;
-    background-color: red;
-    border: 1px solid black;
+.card-container article {
+    z-index: 2;
 
     flex: 0 0 auto;
 
+    position: relative;
+    
+    width: 350px;
+    height: 500px;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+    
+    transition: 0.3s;
+    box-shadow: 0 2px 16px rgb(0,0,0,0.2);
+
 }
 
+.card-container article:hover {
+    box-shadow: 0 2px 48px rgb(0,0,0,0.2);
+    width: 380px;
+}
 
+.card-container article img {
+    height: 520px;
+    z-index: 3;
+}
 
-@media screen and (max-width: 1000px) {
+.card-container article div {
+    z-index: 4;
+
+    align-items: flex-start;
+
+    color: white;
+
+    width: 225px;
+    height: 100px;
+
+    background-color: #002432;
+
+    position: absolute;
+
+    bottom: 10%;
+    left: 0;
+    top: 55%;
+}
+
+@keyframes open {
+    0% {width: 100px;}
+    100% {width: 275px;}
+} 
+
+@keyframes close {
+    0% {width: 275px;}
+    100% {width: 100px;}
+} 
+
+@media screen and (max-width: 1800px) {
+    
+    .card-container {
+        width: 1250px;
+    }
+
+    .card-container article {
+        width: 275px;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
 
     nav {
         flex-direction: column;
@@ -228,7 +263,7 @@ main .Welcome-text {
         100% {width: 0}
     } 
 
-    main .Welcome-text {
+    .Welcome-text {
         align-items: center;
     
         padding: 0 5vw;
@@ -237,26 +272,21 @@ main .Welcome-text {
         height: 125px;
     }
     
-    Main .Welcome-text p {
+    .Welcome-text p {
         font-size: 1.5rem;
     }
 
-    .vejledninger {
+    .card-container {
         width: 100vw;
-        height: 60vh;
-        border: none;
-    }
-
-    .vejledninger ul {
-        height: 60vh;
-        width: 100%;
 
         overflow-x: scroll;
+        padding: 0 5px;
+
+        gap: 5px;
     }
 
-    .vejledninger ul li {
-        width: 90%;
-        height: 60vh;
+    .card-container article {
+        width: 350px;
     }
 
 }
