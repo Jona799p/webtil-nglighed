@@ -42,10 +42,12 @@ main, nav ul, .card-container article div {
 }
 
 main {
+    margin-left: 5vw;
     align-items: center;
-    width: 95vw;
-    padding-left: 100px;
+    width: 94vw;
     gap: 100px;
+
+    overflow: hidden;
 
     padding-bottom: 100px;
 }
@@ -179,6 +181,7 @@ main .Welcome-text {
     top: 55%;
 }
 
+
 .værktøj {
     width: 1600px;
     height: 600px;
@@ -197,7 +200,7 @@ main .Welcome-text {
 
     list-style-type: none;
     
-    height: 600px;
+    height: 100%;
     width: 100%;
 }
 
@@ -241,18 +244,51 @@ main .Welcome-text {
 } 
 
 @media screen and (max-width: 1800px) {
+
+    body {
+        width: 100vw;    
+        overflow-x: hidden;
+        }
     
     .card-container {
-        width: 1250px;
+        width: 75vw;
+        height: 450px;
     }
 
     .card-container article {
-        width: 275px;
+        width: 17vw;
+        height: 400px;
     }
 
+    .card-container article:hover {
+        width: 19vw;
+    }
+
+    .værktøj {
+        width: 75vw;
+        height: 400px;
+    }
+
+    .værktøj ul {
+        grid-template-columns: repeat(6, 110px);
+        grid-template-rows: auto;
+    }
+
+    .værktøj ul li {
+        width: 110px;
+        height: 110px;
+
+        grid-template-columns: repeat(6, 110x);
+        grid-template-rows: auto;
+    }
+
+    .værktøj ul li a {
+        width: 110px;
+        height: 110px;
+    }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 950px) {
 
     nav {
         flex-direction: column;
@@ -260,19 +296,18 @@ main .Welcome-text {
         justify-content: center;
 
         width: 0;
-
-    }
-
-    main {
-        padding: 0;
-        width: 100vw;
     }
 
     .phone-header {
         display: flex;
-        position: sticky;
+        position: fixed;
+
         top: 0;
+        right: 0;
+
         z-index: 999;
+
+        margin-bottom: 5vh;
         
         justify-content: flex-end;
 
@@ -286,6 +321,17 @@ main .Welcome-text {
         color: white;
         font-size: 2.5rem;
     }
+
+    main {
+        padding: 0;
+        width: 100vw;
+        margin: 0;
+    }
+
+    header {
+        width: 0;
+    }
+
 
     nav ul img {
         height: 75px;
@@ -343,7 +389,11 @@ main .Welcome-text {
     }
 
     .card-container article {
-        width: 350px;
+        width: 70vw;
+    }
+
+    .card-container article:hover {
+        width: 80vw;
     }
 
     .værktøj {
@@ -354,10 +404,16 @@ main .Welcome-text {
     .værktøj ul {
         flex-direction: column;
 
-        grid-template-columns: repeat(2, 150px);
+        grid-template-columns: repeat(2, 110px);
         grid-template-rows: auto;
 
-        height: 1100px;
+        gap: 20px;
+
+        padding: 20px 0;
+
+        height: auto;
     }
+    
+
 
 }
