@@ -16,7 +16,7 @@ header {
     z-index: 1000;
 }
 
-nav, nav ul, nav ul li a, .phone-header, .Welcome-text, main, .card-container article div {
+nav, nav ul, nav ul li a, .phone-header, main, .card-container article div {
     display: flex;
 }
 
@@ -49,7 +49,7 @@ main {
 
     overflow: hidden;
 
-    padding-bottom: 100px;
+    padding: 45px 0;
 }
 
 #logo {
@@ -110,18 +110,34 @@ nav ul li a:hover {
     color: black;
 }
 
-main .Welcome-text {
+.søg-felt {
+    display: flex;
+
+    justify-content: space-between;
     align-items: center;
 
-    padding: 0 8.5vw;
+    padding: 0 20px;
 
-    width: 100vw;
-    height: 100px;
-
+    width: 30vw;
+    height: 65px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
-.Welcome-text p {
-    font-size: 2rem;
+.søg-felt i {
+    font-size: 2.3rem;
+    color: #272727;
+    cursor: pointer;
+}
+
+.søg-felt input {
+    width: 95%;
+    height: 100%;
+    outline: none;
+    border: none;
+
+    font-size: 1.8rem;
+    color: #272727;
 }
 
 .card-container {
@@ -135,8 +151,6 @@ main .Welcome-text {
 }
 
 .card-container article {
-    z-index: 2;
-
     flex: 0 0 auto;
 
     position: relative;
@@ -160,11 +174,11 @@ main .Welcome-text {
 
 .card-container article img {
     height: 520px;
-    z-index: 3;
+    z-index: 1;
 }
 
 .card-container article div {
-    z-index: 4;
+    z-index: 2;
 
     align-items: flex-start;
 
@@ -184,8 +198,8 @@ main .Welcome-text {
 
 
 .værktøj {
-    width: 1600px;
-    height: 600px;
+    width: auto;
+    height: auto;
     box-shadow: 0 0 4px rgb(0, 0, 0, 0.2);
     border-radius: 5px;
 }
@@ -243,30 +257,31 @@ main .Welcome-text {
     100% {width: 100px;}
 } 
 
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1920px) {
 
     body {
         width: 100vw;    
         overflow-x: hidden;
         }
     
+
     .card-container {
-        width: 75vw;
+        width: 70vw;
         height: 450px;
     }
 
     .card-container article {
-        width: 17vw;
-        height: 400px;
+        width: 15vw;
+        height: 375px;
     }
 
     .card-container article:hover {
-        width: 19vw;
+        width: 17vw;
     }
 
     .værktøj {
-        width: 80vw;
-        height: 425px;
+        width: auto;
+        height: auto;
     }
 
     .værktøj ul li {
@@ -313,7 +328,6 @@ main .Welcome-text {
     }
 
     main {
-        padding: 0;
         width: 100vw;
         margin: 0;
     }
@@ -356,18 +370,6 @@ main .Welcome-text {
         100% {width: 0}
     } 
 
-    .Welcome-text {
-        align-items: center;
-
-        margin-top: 10vh;
-
-        width: 100vw;
-    }
-    
-    .Welcome-text p {
-        font-size: 1.5rem;
-    }
-
     .card-container {
         width: 100vw;
 
@@ -402,7 +404,4 @@ main .Welcome-text {
 
         height: auto;
     }
-    
-
-
 }
