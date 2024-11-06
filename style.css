@@ -113,6 +113,10 @@ nav ul li a:hover {
 .søg-felt {
     display: flex;
 
+    background-color: white;
+
+    gap: 5px;
+
     justify-content: space-between;
     align-items: center;
 
@@ -122,6 +126,10 @@ nav ul li a:hover {
     height: 65px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+}
+
+.søg-felt:focus-within {
+    outline: 1px solid black;
 }
 
 .søg-felt i {
@@ -265,6 +273,10 @@ nav ul li a:hover {
         }
     
 
+    .søg-felt {
+        width: 40vw;
+    }
+
     .card-container {
         width: 70vw;
         height: 450px;
@@ -309,6 +321,8 @@ nav ul li a:hover {
         display: flex;
         position: fixed;
 
+        gap: 20px;
+
         top: 0;
         right: 0;
 
@@ -324,7 +338,7 @@ nav ul li a:hover {
         padding: 0 5vw;
 
         color: white;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     main {
@@ -336,6 +350,17 @@ nav ul li a:hover {
         width: 0;
     }
 
+    .søg-felt {
+        position: fixed;
+
+        width: 85vw;
+
+        top: -65px;
+
+        z-index: 999;
+
+        transition: 0.5s;
+    }
 
     nav ul img {
         height: 75px;
