@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -120,7 +122,11 @@ nav ul li a:hover {
     color: black;
 }
 
-.søg-felt {
+.søg-felt div p a:last-child {
+    font-weight: bold;    
+}
+
+.søg-felt div:first-child {
     display: flex;
 
     background-color: white;
@@ -138,7 +144,12 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.søg-felt:focus-within {
+.søg-felt div:last-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.søg-felt div:focus-within {
     outline: 1px solid black;
 }
 
@@ -215,14 +226,13 @@ nav ul li a:hover {
 .card-container article div {
     z-index: 2;
 
-    align-items: flex-start;
-
     color: white;
 
     width: auto;
+    width: 90%;
     height: 100px;
     
-    padding: 0 25px;
+    padding: 0 0 0 10px;
 
     background-color: #002432;
 
@@ -391,6 +401,16 @@ nav ul li a:hover {
     object-position: center;
 }
 
+.profile article:nth-child(1) a {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 25px;
+}
+
+.profile article:nth-child(1) a:hover {
+    text-decoration: underline;
+} 
+
 .profile article:nth-child(2) {
     flex-direction: column;
 
@@ -435,13 +455,33 @@ nav ul li a:hover {
     width: 80%;
 }
 
+.skip-link {
+    position: absolute;
+    top: -1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 200px;
+    width: 250px;
+    height: 50px;
+    background-color: black;
+    font-weight: bold;
+    color: white
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 @keyframes open {
     0% {width: 100px;}
-    100% {width: 275px;}
+    100% {width: 325px;}
 } 
 
 @keyframes close {
-    0% {width: 275px;}
+    0% {width: 300px;}
     100% {width: 100px;}
 }
 
@@ -557,6 +597,14 @@ nav ul li a:hover {
         z-index: 999;
 
         transition: 0.5s;
+    }
+
+    .søg-felt div {
+        width: 100%;
+    }
+
+    .søg-felt p {
+        display: none;
     }
 
     nav ul img {
