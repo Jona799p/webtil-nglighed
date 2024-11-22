@@ -209,6 +209,7 @@ nav ul li a:hover {
 .card-container > div {
     display: flex;
 
+    
     width: 1600px;
     height: 500px;
 
@@ -488,7 +489,7 @@ nav ul li a:hover {
 @media screen and (max-width: 1920px) {
 
     .søg-felt div:first-child {
-        width: 40vw;
+        width: 80vw;
     }
 
     .card-container {
@@ -553,6 +554,10 @@ nav ul li a:hover {
         width: 0;
     }
 
+    .card-container > div {
+        overflow-x: scroll;
+    }
+
     .phone-header {
         display: flex;
         position: fixed;
@@ -600,7 +605,7 @@ nav ul li a:hover {
     }
 
     .søg-felt div {
-        width: 100%;
+        width: 85vw;
     }
 
     .søg-felt p {
@@ -657,7 +662,6 @@ nav ul li a:hover {
 
     .card-container div {
         box-shadow: 0 0 4px rgb(0, 0, 0, 0.0);
-        overflow-x: scroll;
     }
 
     .værktøj {
